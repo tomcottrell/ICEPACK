@@ -23,6 +23,8 @@
 #include <gui/screenpdm_screen/ScreenPDMPresenter.hpp>
 #include <gui/screeneng_screen/ScreenENGView.hpp>
 #include <gui/screeneng_screen/ScreenENGPresenter.hpp>
+#include <gui/screenac_screen/ScreenACView.hpp>
+#include <gui/screenac_screen/ScreenACPresenter.hpp>
 #include <gui/screenlcdtest_screen/ScreenLCDtestView.hpp>
 #include <gui/screenlcdtest_screen/ScreenLCDtestPresenter.hpp>
 
@@ -147,15 +149,15 @@ void FrontendApplicationBase::gotoScreenENGScreenNoTransitionImpl()
     touchgfx::makeTransition<ScreenENGView, ScreenENGPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// ScreenLCDtest
+// ScreenAC
 
-void FrontendApplicationBase::gotoScreenLCDtestScreenNoTransition()
+void FrontendApplicationBase::gotoScreenACScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoScreenLCDtestScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoScreenACScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoScreenLCDtestScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoScreenACScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<ScreenLCDtestView, ScreenLCDtestPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<ScreenACView, ScreenACPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

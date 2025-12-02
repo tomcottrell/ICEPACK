@@ -43,8 +43,8 @@ public:
     // ScreenENG
     void gotoScreenENGScreenNoTransition();
 
-    // ScreenLCDtest
-    void gotoScreenLCDtestScreenNoTransition();
+    // ScreenAC
+    void gotoScreenACScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -74,8 +74,8 @@ protected:
     // ScreenENG
     void gotoScreenENGScreenNoTransitionImpl();
 
-    // ScreenLCDtest
-    void gotoScreenLCDtestScreenNoTransitionImpl();
+    // ScreenAC
+    void gotoScreenACScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

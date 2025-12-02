@@ -280,6 +280,18 @@
     <Filter Include="Header Files\generated\gui_generated\screeneng_screen">
       <UniqueIdentifier>F2D2DD1A-018F-A764-EC8A-6A6FF237B3BF</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\screenac_screen">
+      <UniqueIdentifier>4FD4D267-3387-3B3E-4915-42DA4E884589</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screenac_screen">
+      <UniqueIdentifier>56FABB32-7F5B-FCED-3CF0-0D7A69858598</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screenac_screen">
+      <UniqueIdentifier>1915FCD8-C65C-568B-F501-F20E9F24DCE0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screenac_screen">
+      <UniqueIdentifier>5772ED52-8347-B1A6-1747-A8BBAF84EBDC</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -389,6 +401,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screeneng_screen\ScreenENGViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screeneng_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screenac_screen\ScreenACPresenter.cpp">
+      <Filter>Source Files\gui\screenac_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screenac_screen\ScreenACView.cpp">
+      <Filter>Source Files\gui\screenac_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screenac_screen\ScreenACViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screenac_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -909,6 +930,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screeneng_screen\ScreenENGViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screeneng_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screenac_screen\ScreenACPresenter.hpp">
+      <Filter>Header Files\gui\screenac_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screenac_screen\ScreenACView.hpp">
+      <Filter>Header Files\gui\screenac_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screenac_screen\ScreenACViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screenac_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

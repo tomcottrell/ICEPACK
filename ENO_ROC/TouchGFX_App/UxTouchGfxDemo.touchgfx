@@ -210,15 +210,15 @@
             }
           },
           {
-            "InteractionName": "Go_to_LCD_screen",
+            "InteractionName": "Go_to_AC",
             "Trigger": {
-              "Type": "TriggerWhen",
-              "ActionCustomTypeName": "Call ScreenTestHome GoToLCDtestScreen"
+              "Type": "TriggerPhysicalButtonClicked",
+              "ButtonKey": 3
             },
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "ScreenLCDtest"
+              "ActionComponent": "ScreenAC"
             }
           },
           {
@@ -3006,6 +3006,133 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "ack_DM1"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "buttonHandler",
+            "Description": "Handles button presses",
+            "HasValue": true,
+            "ValueType": "uint8_t"
+          }
+        ]
+      },
+      {
+        "Name": "ScreenAC",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 320,
+            "Height": 240,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "button0",
+            "Y": 216,
+            "Width": 80,
+            "Height": 24,
+            "Pressed": "Button_grey.png",
+            "Released": "Button_grey.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1",
+            "X": 80,
+            "Y": 216,
+            "Width": 80,
+            "Height": 24,
+            "Pressed": "Button_grey.png",
+            "Released": "Button_grey.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button2",
+            "X": 160,
+            "Y": 216,
+            "Width": 80,
+            "Height": 24,
+            "Pressed": "Button_grey.png",
+            "Released": "Button_grey.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button3",
+            "X": 240,
+            "Y": 216,
+            "Width": 80,
+            "Height": 24,
+            "Pressed": "Button_grey.png",
+            "Released": "Button_grey.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textExit",
+            "X": 21,
+            "Y": 219,
+            "Width": 38,
+            "Height": 19,
+            "TextId": "__SingleUse_3OCX",
+            "TextRotation": "0",
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "handle_button_press_0",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked"
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call ScreenLCDtest buttonHandler",
+              "ParameterValue": "0",
+              "ActionComponent": "ScreenAC"
+            }
+          },
+          {
+            "InteractionName": "handle_button_press_1",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked",
+              "ButtonKey": 1
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call ScreenLCDtest buttonHandler",
+              "ParameterValue": "1",
+              "ActionComponent": "ScreenAC"
+            }
+          },
+          {
+            "InteractionName": "handle_button_press_2",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked",
+              "ButtonKey": 2
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call ScreenLCDtest buttonHandler",
+              "ParameterValue": "2",
+              "ActionComponent": "ScreenAC"
+            }
+          },
+          {
+            "InteractionName": "handle_button_press_3",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked",
+              "ButtonKey": 3
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call ScreenLCDtest buttonHandler",
+              "ParameterValue": "3",
+              "ActionComponent": "ScreenAC"
             }
           }
         ],

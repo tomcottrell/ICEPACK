@@ -29,11 +29,15 @@ public:
         // Override and implement this function in Screen1
     }
     
+    virtual void GoToLCDtestScreen()
+    {
+        // Override and implement this function in Screen1
+    }
+    
     virtual void GoToCANtestScreen();
     virtual void GoToOutputsTestScreen();
     virtual void GoToInputsTestScreen();
     virtual void GoToHomeScreen();
-    virtual void GoToLCDtestScreen();
 
 protected:
     FrontendApplication& application() {

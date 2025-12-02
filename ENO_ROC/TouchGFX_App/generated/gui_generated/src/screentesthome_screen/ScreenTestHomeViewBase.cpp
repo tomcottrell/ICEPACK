@@ -111,6 +111,15 @@ void ScreenTestHomeViewBase::handleKeyEvent(uint8_t key)
 
     if(3 == key)
     {
+        //Go_to_AC
+        //When hardware button 3 clicked change screen to ScreenAC
+        //Go to ScreenAC with no screen transition
+        application().gotoScreenACScreenNoTransition();
+    
+    }
+
+    if(3 == key)
+    {
         //handle_button_press_3
         //When hardware button 3 clicked call buttonHandler on ScreenTestHome
         //Call buttonHandler
@@ -149,12 +158,4 @@ void ScreenTestHomeViewBase::GoToHomeScreen()
     //When GoToHomeScreen is called change screen to ScreenTestHome
     //Go to ScreenTestHome with no screen transition
     application().gotoScreenTestHomeScreenNoTransition();
-}
-
-void ScreenTestHomeViewBase::GoToLCDtestScreen()
-{
-    //Go_to_LCD_screen
-    //When GoToLCDtestScreen is called change screen to ScreenLCDtest
-    //Go to ScreenLCDtest with no screen transition
-    application().gotoScreenLCDtestScreenNoTransition();
 }

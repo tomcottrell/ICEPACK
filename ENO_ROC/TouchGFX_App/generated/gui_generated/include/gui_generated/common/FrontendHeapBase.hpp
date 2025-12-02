@@ -28,6 +28,8 @@
 #include <gui/screenpdm_screen/ScreenPDMPresenter.hpp>
 #include <gui/screeneng_screen/ScreenENGView.hpp>
 #include <gui/screeneng_screen/ScreenENGPresenter.hpp>
+#include <gui/screenac_screen/ScreenACView.hpp>
+#include <gui/screenac_screen/ScreenACPresenter.hpp>
 #include <gui/screenlcdtest_screen/ScreenLCDtestView.hpp>
 #include <gui/screenlcdtest_screen/ScreenLCDtestPresenter.hpp>
 
@@ -59,8 +61,9 @@ public:
             touchgfx::meta::TypeList< ScreenSystemView,
             touchgfx::meta::TypeList< ScreenPDMView,
             touchgfx::meta::TypeList< ScreenENGView,
+            touchgfx::meta::TypeList< ScreenACView,
             touchgfx::meta::TypeList< ScreenLCDtestView,
-            touchgfx::meta::Nil > > > > > > >
+            touchgfx::meta::Nil > > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -79,8 +82,9 @@ public:
             touchgfx::meta::TypeList< ScreenSystemPresenter,
             touchgfx::meta::TypeList< ScreenPDMPresenter,
             touchgfx::meta::TypeList< ScreenENGPresenter,
+            touchgfx::meta::TypeList< ScreenACPresenter,
             touchgfx::meta::TypeList< ScreenLCDtestPresenter,
-            touchgfx::meta::Nil > > > > > > >
+            touchgfx::meta::Nil > > > > > > > >
             > GeneratedPresenterTypes;
 
     /**

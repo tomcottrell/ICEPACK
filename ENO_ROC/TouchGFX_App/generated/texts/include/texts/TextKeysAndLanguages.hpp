@@ -18,6 +18,7 @@ enum TEXTS
     T_I2,
     T_I1,
     T_I0,
+    T___SINGLEUSE_3OCX,
     T___SINGLEUSE_DV70,
     T___SINGLEUSE_PZKZ,
     T___SINGLEUSE_UX5T,

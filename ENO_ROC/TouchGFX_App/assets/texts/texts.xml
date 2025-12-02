@@ -25,6 +25,9 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_3OCX" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">EXIT</Translation>
+      </Text>
       <Text Id="__SingleUse_DV70" Alignment="Left" TypographyId="Typography_00">
         <Translation Language="GB">00.34</Translation>
       </Text>
@@ -617,7 +620,7 @@
         <Translation Language="GB">EXIT</Translation>
       </Text>
       <Text Id="__SingleUse_8HN7" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Base project V2.00.00</Translation>
+        <Translation Language="GB">ICEPACK V0.00.01</Translation>
       </Text>
       <Text Id="__SingleUse_0F0T" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">----</Translation>

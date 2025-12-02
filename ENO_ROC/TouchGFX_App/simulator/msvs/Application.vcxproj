@@ -47,6 +47,9 @@
     <ClCompile Include="..\..\gui\src\screeneng_screen\ScreenENGPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\screeneng_screen\ScreenENGView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\screeneng_screen\ScreenENGViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screenac_screen\ScreenACPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screenac_screen\ScreenACView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screenac_screen\ScreenACViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -223,6 +226,9 @@
     <ClInclude Include="..\..\gui\include\gui\screeneng_screen\ScreenENGPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\screeneng_screen\ScreenENGView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screeneng_screen\ScreenENGViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screenac_screen\ScreenACPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screenac_screen\ScreenACView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screenac_screen\ScreenACViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>
