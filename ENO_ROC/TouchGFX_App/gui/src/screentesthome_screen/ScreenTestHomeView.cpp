@@ -44,7 +44,7 @@ void ScreenTestHomeView::buttonHandler( uint8_t value ) {
     		  break;
     	  case 3:
     		  //Button 3: Goto LCD test screen
-    		  application().gotoScreenLCDtestScreenNoTransition();
+    		  //application().gotoScreenLCDtestScreenNoTransition();
     		  break;
       }
 

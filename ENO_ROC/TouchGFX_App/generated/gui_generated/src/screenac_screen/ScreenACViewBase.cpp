@@ -37,6 +37,48 @@ ScreenACViewBase::ScreenACViewBase()
     textExit.setLinespacing(0);
     textExit.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3OCX));
     add(textExit);
+
+    textExit_1.setXY(104, 219);
+    textExit_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textExit_1.setLinespacing(0);
+    textExit_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YOQX));
+    add(textExit_1);
+
+    textExit_1_1.setXY(179, 219);
+    textExit_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textExit_1_1.setLinespacing(0);
+    textExit_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_A9B6));
+    add(textExit_1_1);
+
+    textExit_1_1_1.setXY(258, 219);
+    textExit_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textExit_1_1_1.setLinespacing(0);
+    textExit_1_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1S79));
+    add(textExit_1_1_1);
+
+    textFan.setPosition(13, 15, 209, 25);
+    textFan.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textFan.setLinespacing(0);
+    Unicode::snprintf(textFanBuffer, TEXTFAN_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_T15H).getText());
+    textFan.setWildcard(textFanBuffer);
+    textFan.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OA7W));
+    add(textFan);
+
+    textTemp.setPosition(13, 40, 289, 27);
+    textTemp.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textTemp.setLinespacing(0);
+    Unicode::snprintf(textTempBuffer, TEXTTEMP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_W8TS).getText());
+    textTemp.setWildcard(textTempBuffer);
+    textTemp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8GTL));
+    add(textTemp);
+
+    textComp.setPosition(13, 67, 289, 27);
+    textComp.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textComp.setLinespacing(0);
+    Unicode::snprintf(textCompBuffer, TEXTCOMP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8HP3).getText());
+    textComp.setWildcard(textCompBuffer);
+    textComp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OD4N));
+    add(textComp);
 }
 
 ScreenACViewBase::~ScreenACViewBase()
@@ -51,39 +93,21 @@ void ScreenACViewBase::setupScreen()
 
 void ScreenACViewBase::handleKeyEvent(uint8_t key)
 {
-    if(0 == key)
-    {
-        //handle_button_press_0
-        //When hardware button 0 clicked call buttonHandler on ScreenAC
-        //Call buttonHandler
-        ScreenAC.buttonHandler(0);
-    
-    }
-
     if(1 == key)
     {
-        //handle_button_press_1
-        //When hardware button 1 clicked call buttonHandler on ScreenAC
-        //Call buttonHandler
-        ScreenAC.buttonHandler(1);
+        //FanControl
+        //When hardware button 1 clicked call virtual function
+        //Call FanSpeed
+        FanSpeed();
     
     }
 
-    if(2 == key)
+    if(0 == key)
     {
-        //handle_button_press_2
-        //When hardware button 2 clicked call buttonHandler on ScreenAC
-        //Call buttonHandler
-        ScreenAC.buttonHandler(2);
-    
-    }
-
-    if(3 == key)
-    {
-        //handle_button_press_3
-        //When hardware button 3 clicked call buttonHandler on ScreenAC
-        //Call buttonHandler
-        ScreenAC.buttonHandler(3);
+        //Exit
+        //When hardware button 0 clicked change screen to ScreenTestHome
+        //Go to ScreenTestHome with no screen transition
+        application().gotoScreenTestHomeScreenNoTransition();
     
     }
 }

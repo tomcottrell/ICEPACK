@@ -25,6 +25,33 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_8HP3" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Engaged</Translation>
+      </Text>
+      <Text Id="__SingleUse_OD4N" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Compressor: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_W8TS" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">10000</Translation>
+      </Text>
+      <Text Id="__SingleUse_8GTL" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Temperature: &lt;value&gt; Ohms</Translation>
+      </Text>
+      <Text Id="__SingleUse_T15H" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">MED</Translation>
+      </Text>
+      <Text Id="__SingleUse_OA7W" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Fan Speed: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_1S79" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">STOP</Translation>
+      </Text>
+      <Text Id="__SingleUse_A9B6" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">TEMP</Translation>
+      </Text>
+      <Text Id="__SingleUse_YOQX" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">FAN</Translation>
+      </Text>
       <Text Id="__SingleUse_3OCX" Alignment="Left" TypographyId="Typography_00">
         <Translation Language="GB">EXIT</Translation>
       </Text>

@@ -3081,58 +3081,107 @@
             "TextId": "__SingleUse_3OCX",
             "TextRotation": "0",
             "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textExit_1",
+            "X": 104,
+            "Y": 219,
+            "Width": 32,
+            "Height": 19,
+            "TextId": "__SingleUse_YOQX",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textExit_1_1",
+            "X": 179,
+            "Y": 219,
+            "Width": 43,
+            "Height": 19,
+            "TextId": "__SingleUse_A9B6",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textExit_1_1_1",
+            "X": 258,
+            "Y": 219,
+            "Width": 44,
+            "Height": 19,
+            "TextId": "__SingleUse_1S79",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textFan",
+            "X": 13,
+            "Y": 15,
+            "Width": 209,
+            "Height": 25,
+            "TextId": "__SingleUse_OA7W",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_T15H",
+              "UseBuffer": true,
+              "BufferSize": 15
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textTemp",
+            "X": 13,
+            "Y": 40,
+            "Width": 289,
+            "Height": 27,
+            "TextId": "__SingleUse_8GTL",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_W8TS",
+              "UseBuffer": true,
+              "BufferSize": 15
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textComp",
+            "X": 13,
+            "Y": 67,
+            "Width": 289,
+            "Height": 27,
+            "TextId": "__SingleUse_OD4N",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_8HP3",
+              "UseBuffer": true,
+              "BufferSize": 15
+            }
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "handle_button_press_0",
-            "Trigger": {
-              "Type": "TriggerPhysicalButtonClicked"
-            },
-            "Action": {
-              "Type": "ActionCustom2",
-              "ActionCustomTypeName": "Call ScreenLCDtest buttonHandler",
-              "ParameterValue": "0",
-              "ActionComponent": "ScreenAC"
-            }
-          },
-          {
-            "InteractionName": "handle_button_press_1",
+            "InteractionName": "FanControl",
             "Trigger": {
               "Type": "TriggerPhysicalButtonClicked",
               "ButtonKey": 1
             },
             "Action": {
-              "Type": "ActionCustom2",
-              "ActionCustomTypeName": "Call ScreenLCDtest buttonHandler",
-              "ParameterValue": "1",
-              "ActionComponent": "ScreenAC"
+              "Type": "ActionCustom",
+              "FunctionName": "FanSpeed"
             }
           },
           {
-            "InteractionName": "handle_button_press_2",
+            "InteractionName": "Exit",
             "Trigger": {
-              "Type": "TriggerPhysicalButtonClicked",
-              "ButtonKey": 2
+              "Type": "TriggerPhysicalButtonClicked"
             },
             "Action": {
-              "Type": "ActionCustom2",
-              "ActionCustomTypeName": "Call ScreenLCDtest buttonHandler",
-              "ParameterValue": "2",
-              "ActionComponent": "ScreenAC"
-            }
-          },
-          {
-            "InteractionName": "handle_button_press_3",
-            "Trigger": {
-              "Type": "TriggerPhysicalButtonClicked",
-              "ButtonKey": 3
-            },
-            "Action": {
-              "Type": "ActionCustom2",
-              "ActionCustomTypeName": "Call ScreenLCDtest buttonHandler",
-              "ParameterValue": "3",
-              "ActionComponent": "ScreenAC"
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "ScreenTestHome"
             }
           }
         ],

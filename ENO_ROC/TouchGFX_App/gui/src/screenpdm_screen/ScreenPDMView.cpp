@@ -2,6 +2,7 @@
 #include <touchgfx/Unicode.hpp>
 #include "PDM.h"
 
+
 //extern uint8_t pdm_output_commands[12];
 
 static uint8_t lastcall = 0;

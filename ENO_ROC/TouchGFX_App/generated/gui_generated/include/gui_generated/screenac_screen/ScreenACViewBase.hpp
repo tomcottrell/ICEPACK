@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class ScreenACViewBase : public touchgfx::View<ScreenACPresenter>
 {
@@ -28,6 +29,14 @@ public:
     }
     
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void FanSpeed()
+    {
+        // Override and implement this function in ScreenAC
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -43,6 +52,22 @@ protected:
     touchgfx::Button button2;
     touchgfx::Button button3;
     touchgfx::TextArea textExit;
+    touchgfx::TextArea textExit_1;
+    touchgfx::TextArea textExit_1_1;
+    touchgfx::TextArea textExit_1_1_1;
+    touchgfx::TextAreaWithOneWildcard textFan;
+    touchgfx::TextAreaWithOneWildcard textTemp;
+    touchgfx::TextAreaWithOneWildcard textComp;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTFAN_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar textFanBuffer[TEXTFAN_SIZE];
+    static const uint16_t TEXTTEMP_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar textTempBuffer[TEXTTEMP_SIZE];
+    static const uint16_t TEXTCOMP_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar textCompBuffer[TEXTCOMP_SIZE];
 
 private:
 

@@ -1,6 +1,8 @@
 #include "PDM.h"
+#include "AC.h"
 #include "IO_Mapping.h"
 #include "Engine_App.h"
+
 
 extern bool Output1_control;
 extern bool Output2_control;
@@ -57,9 +59,9 @@ EXTERNAL_SHUTDOWN = pdm_digital_inputs[2]; 	// DI3
 pdm_output_enable[0] = 0; 		//1
 pdm_output_enable[1] = 0; 		//2
 //pdm_output_enable[2]; 		//3
-pdm_output_enable[3] = 0; 		//4
-pdm_output_enable[4] = FUEL; 	//5
-pdm_output_enable[5] = 0; 		//6
+pdm_output_enable[3] = LOW; 	//4
+pdm_output_enable[4] = MED; 	//5
+pdm_output_enable[5] = HIGH; 	//6
 pdm_output_enable[6] = FUEL; 	//7
 pdm_output_enable[7] = CRANK; 	//8
 pdm_output_enable[8] = 0; 		//9

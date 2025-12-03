@@ -44,6 +44,7 @@
 #include "SystemHealthManager.h"
 #include "pdm.h"
 #include "Engine_App.h"
+#include "AC.h"
 #include "IO_Mapping.h"
 
 /* USER CODE END Includes */
@@ -1209,6 +1210,10 @@ void StartDefaultTask(void *argument)
 
    		//Engine App
    		engine_app();
+
+   		//AC Control
+   		AC_app();
+
 
    		//I/O MAPPING
    		IO_Mapping_Update();
