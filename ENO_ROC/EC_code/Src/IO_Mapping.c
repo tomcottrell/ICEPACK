@@ -17,7 +17,7 @@ void IO_Mapping_Update()
 LOW_OIL_PRESSURE = pdm_digital_inputs[0]; 	// DI1
 HIGH_ENG_TEMP = pdm_digital_inputs[1]; 		// DI2
 EXTERNAL_SHUTDOWN = pdm_digital_inputs[2]; 	// DI3
-//pdm_digital_inputs[3]; // DI4
+AC_PRESSURE_SWITCH = pdm_digital_inputs[3]; // DI4
 //pdm_digital_inputs[4]; // DI5
 //pdm_digital_inputs[5]; // DI6
 //pdm_digital_inputs[6]; // DI7
@@ -63,7 +63,7 @@ pdm_output_enable[3] = LOW; 	//4
 pdm_output_enable[4] = MED; 	//5
 pdm_output_enable[5] = HIGH; 	//6
 pdm_output_enable[6] = FUEL; 	//7
-pdm_output_enable[7] = CRANK; 	//8
+pdm_output_enable[7] = COMP; 	//8
 pdm_output_enable[8] = 0; 		//9
 pdm_output_enable[9]= CRANK; 	//10
 pdm_output_enable[10] = 0; 		//11

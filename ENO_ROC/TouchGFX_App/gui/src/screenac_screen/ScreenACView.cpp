@@ -20,11 +20,24 @@ void ScreenACView::tearDownScreen()
 
 void ScreenACView::handleTickEvent()
 {
-	float Outlet_Temp;
 	static uint8_t loop_count;
-    Outlet_Temp = (pdm_analog_inputs[0] / 1023.0f) * 5.0f;
-    Unicode::snprintfFloat(textTempBuffer, TEXTEMP_SIZE, ""%.2fV", Outlet_Temp);
 
+	float Outlet_Temp;
+
+	//Resistance
+    Outlet_Temp = (pdm_analog_inputs[0] / 1023.0f) * 10000.0f;
+    Unicode::snprintfFloat(textResBuffer,TEXTRES_SIZE,"%.2f", Outlet_Temp);
+
+    //TEMP
+    Outlet_Temp = 25.0f - (Outlet_Temp - 2000.0f) / 88.0f;
+    Unicode::snprintfFloat(textTempBuffer,TEXTTEMP_SIZE,"%.2f", Outlet_Temp);
+
+    //Clutch Engage/Disengage
+    if(COMP == 1)
+    {
+    	Unicode::strncpy(textCompBuffer,"Engaged", TEXTCOMP_SIZE);
+    }
+    else{Unicode::strncpy(textCompBuffer,"Disabled", TEXTCOMP_SIZE);}
 	if(++loop_count > 19)
 		{
 			loop_count = 0;
@@ -57,4 +70,22 @@ void ScreenACView::FanSpeed()
 	}
 	else{LOW = 0;MED=0;HIGH=0;Unicode::strncpy(textFanBuffer,"OFF", TEXTFAN_SIZE);}
 
+}
+
+void ScreenACView::INC()
+{
+	Resistance_Setpoint = Resistance_Setpoint + 200;
+	if(Resistance_Setpoint > 4000)
+	{
+		Resistance_Setpoint = 4000;
+	}
+}
+
+void ScreenACView::DEC()
+{
+	Resistance_Setpoint = Resistance_Setpoint - 200;
+	if(Resistance_Setpoint < 0)
+	{
+		Resistance_Setpoint = 0;
+	}
 }

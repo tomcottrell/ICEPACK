@@ -13,6 +13,8 @@ public:
     virtual void tearDownScreen();
     virtual void handleTickEvent();
     virtual void FanSpeed();
+    virtual void INC();
+    virtual void DEC();
 protected:
 };
 

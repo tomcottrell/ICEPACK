@@ -93,7 +93,7 @@
             "Name": "textArea3_1",
             "X": 264,
             "Y": 219,
-            "Width": 32,
+            "Width": 22,
             "Height": 19,
             "TextId": "__SingleUse_LLVS",
             "TextRotation": "0",
@@ -3026,6 +3026,7 @@
             "Name": "box1",
             "Width": 320,
             "Height": 240,
+            "LockPosition": true,
             "Color": {
               "Red": 255,
               "Green": 255,
@@ -3085,7 +3086,7 @@
           {
             "Type": "TextArea",
             "Name": "textExit_1",
-            "X": 104,
+            "X": 264,
             "Y": 219,
             "Width": 32,
             "Height": 19,
@@ -3096,9 +3097,9 @@
           {
             "Type": "TextArea",
             "Name": "textExit_1_1",
-            "X": 179,
+            "X": 102,
             "Y": 219,
-            "Width": 43,
+            "Width": 33,
             "Height": 19,
             "TextId": "__SingleUse_A9B6",
             "TextRotation": "0",
@@ -3107,9 +3108,9 @@
           {
             "Type": "TextArea",
             "Name": "textExit_1_1_1",
-            "X": 258,
+            "X": 185,
             "Y": 219,
-            "Width": 44,
+            "Width": 30,
             "Height": 19,
             "TextId": "__SingleUse_1S79",
             "TextRotation": "0",
@@ -3118,8 +3119,8 @@
           {
             "Type": "TextArea",
             "Name": "textFan",
-            "X": 13,
-            "Y": 15,
+            "X": 14,
+            "Y": 19,
             "Width": 209,
             "Height": 25,
             "TextId": "__SingleUse_OA7W",
@@ -3132,9 +3133,19 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textTemp",
+            "Name": "textAC",
+            "X": 14,
+            "Y": -2,
+            "Width": 209,
+            "Height": 25,
+            "TextId": "__SingleUse_CH3Q",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textResOutlet",
             "X": 13,
-            "Y": 40,
+            "Y": 42,
             "Width": 289,
             "Height": 27,
             "TextId": "__SingleUse_8GTL",
@@ -3147,15 +3158,70 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textComp",
+            "Name": "textResSet",
             "X": 13,
-            "Y": 67,
+            "Y": 61,
+            "Width": 289,
+            "Height": 27,
+            "TextId": "__SingleUse_3S12",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZDIR",
+              "UseBuffer": true,
+              "BufferSize": 15
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text",
+            "X": 13,
+            "Y": 81,
+            "Width": 320,
+            "Height": 29,
+            "TextId": "__SingleUse_13ZF",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textTemp",
+            "X": 12,
+            "Y": 101,
+            "Width": 289,
+            "Height": 27,
+            "TextId": "__SingleUse_GB9E",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_MAOV",
+              "UseBuffer": true,
+              "BufferSize": 15
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textComp",
+            "X": 12,
+            "Y": 124,
             "Width": 289,
             "Height": 27,
             "TextId": "__SingleUse_OD4N",
             "TextRotation": "0",
             "Wildcard1": {
               "TextId": "__SingleUse_8HP3",
+              "UseBuffer": true,
+              "BufferSize": 15
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textComp_1",
+            "X": 12,
+            "Y": 146,
+            "Width": 289,
+            "Height": 27,
+            "TextId": "__SingleUse_RZFY",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_V7ND",
               "UseBuffer": true,
               "BufferSize": 15
             }
@@ -3166,7 +3232,7 @@
             "InteractionName": "FanControl",
             "Trigger": {
               "Type": "TriggerPhysicalButtonClicked",
-              "ButtonKey": 1
+              "ButtonKey": 3
             },
             "Action": {
               "Type": "ActionCustom",
@@ -3182,6 +3248,28 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "ScreenTestHome"
+            }
+          },
+          {
+            "InteractionName": "DEC",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked",
+              "ButtonKey": 1
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "DEC"
+            }
+          },
+          {
+            "InteractionName": "INC",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked",
+              "ButtonKey": 2
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "INC"
             }
           }
         ],

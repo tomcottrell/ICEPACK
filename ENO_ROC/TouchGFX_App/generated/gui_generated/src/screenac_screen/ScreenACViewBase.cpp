@@ -38,25 +38,25 @@ ScreenACViewBase::ScreenACViewBase()
     textExit.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3OCX));
     add(textExit);
 
-    textExit_1.setXY(104, 219);
+    textExit_1.setXY(264, 219);
     textExit_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textExit_1.setLinespacing(0);
     textExit_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YOQX));
     add(textExit_1);
 
-    textExit_1_1.setXY(179, 219);
+    textExit_1_1.setXY(102, 219);
     textExit_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textExit_1_1.setLinespacing(0);
     textExit_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_A9B6));
     add(textExit_1_1);
 
-    textExit_1_1_1.setXY(258, 219);
+    textExit_1_1_1.setXY(185, 219);
     textExit_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textExit_1_1_1.setLinespacing(0);
     textExit_1_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1S79));
     add(textExit_1_1_1);
 
-    textFan.setPosition(13, 15, 209, 25);
+    textFan.setPosition(14, 19, 209, 25);
     textFan.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textFan.setLinespacing(0);
     Unicode::snprintf(textFanBuffer, TEXTFAN_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_T15H).getText());
@@ -64,21 +64,57 @@ ScreenACViewBase::ScreenACViewBase()
     textFan.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OA7W));
     add(textFan);
 
-    textTemp.setPosition(13, 40, 289, 27);
+    textAC.setPosition(14, -2, 209, 25);
+    textAC.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textAC.setLinespacing(0);
+    textAC.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CH3Q));
+    add(textAC);
+
+    textResOutlet.setPosition(13, 42, 289, 27);
+    textResOutlet.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textResOutlet.setLinespacing(0);
+    Unicode::snprintf(textResOutletBuffer, TEXTRESOUTLET_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_W8TS).getText());
+    textResOutlet.setWildcard(textResOutletBuffer);
+    textResOutlet.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8GTL));
+    add(textResOutlet);
+
+    textResSet.setPosition(13, 61, 289, 27);
+    textResSet.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textResSet.setLinespacing(0);
+    Unicode::snprintf(textResSetBuffer, TEXTRESSET_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_ZDIR).getText());
+    textResSet.setWildcard(textResSetBuffer);
+    textResSet.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3S12));
+    add(textResSet);
+
+    text.setPosition(13, 81, 320, 29);
+    text.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    text.setLinespacing(0);
+    text.setTypedText(touchgfx::TypedText(T___SINGLEUSE_13ZF));
+    add(text);
+
+    textTemp.setPosition(12, 101, 289, 27);
     textTemp.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textTemp.setLinespacing(0);
-    Unicode::snprintf(textTempBuffer, TEXTTEMP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_W8TS).getText());
+    Unicode::snprintf(textTempBuffer, TEXTTEMP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_MAOV).getText());
     textTemp.setWildcard(textTempBuffer);
-    textTemp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8GTL));
+    textTemp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GB9E));
     add(textTemp);
 
-    textComp.setPosition(13, 67, 289, 27);
+    textComp.setPosition(12, 124, 289, 27);
     textComp.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textComp.setLinespacing(0);
     Unicode::snprintf(textCompBuffer, TEXTCOMP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8HP3).getText());
     textComp.setWildcard(textCompBuffer);
     textComp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OD4N));
     add(textComp);
+
+    textComp_1.setPosition(12, 146, 289, 27);
+    textComp_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textComp_1.setLinespacing(0);
+    Unicode::snprintf(textComp_1Buffer, TEXTCOMP_1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V7ND).getText());
+    textComp_1.setWildcard(textComp_1Buffer);
+    textComp_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RZFY));
+    add(textComp_1);
 }
 
 ScreenACViewBase::~ScreenACViewBase()
@@ -93,10 +129,10 @@ void ScreenACViewBase::setupScreen()
 
 void ScreenACViewBase::handleKeyEvent(uint8_t key)
 {
-    if(1 == key)
+    if(3 == key)
     {
         //FanControl
-        //When hardware button 1 clicked call virtual function
+        //When hardware button 3 clicked call virtual function
         //Call FanSpeed
         FanSpeed();
     
@@ -108,6 +144,24 @@ void ScreenACViewBase::handleKeyEvent(uint8_t key)
         //When hardware button 0 clicked change screen to ScreenTestHome
         //Go to ScreenTestHome with no screen transition
         application().gotoScreenTestHomeScreenNoTransition();
+    
+    }
+
+    if(1 == key)
+    {
+        //DEC
+        //When hardware button 1 clicked call virtual function
+        //Call DEC
+        DEC();
+    
+    }
+
+    if(2 == key)
+    {
+        //INC
+        //When hardware button 2 clicked call virtual function
+        //Call INC
+        INC();
     
     }
 }
