@@ -56,8 +56,8 @@ AC_PRESSURE_SWITCH = pdm_digital_inputs[3]; // DI4
 //pdm_output_commands[10] = CRANK; //D011
 //pdm_output_commands[11]; //D012
 
-pdm_output_enable[0] = 0; 		//1
-pdm_output_enable[1] = 0; 		//2
+pdm_output_enable[0] = ENGINE_RUNNING; 		//1
+pdm_output_enable[1] = ENGINE_RUNNING; 		//2
 //pdm_output_enable[2]; 		//3
 pdm_output_enable[3] = LOW; 	//4
 pdm_output_enable[4] = MED; 	//5
@@ -70,7 +70,7 @@ pdm_output_enable[10] = 0; 		//11
 pdm_output_enable[11] = CRANK; 	//12
 
 // S35
-Output1_control = CRANK;
-Output2_control = FUEL;
+//Output1_control = CRANK;
+//Output2_control = FUEL;
 //
 }

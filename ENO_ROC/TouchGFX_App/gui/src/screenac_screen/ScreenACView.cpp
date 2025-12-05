@@ -24,12 +24,15 @@ void ScreenACView::handleTickEvent()
 
 	float Outlet_Temp;
 
-	//Resistance
+	//Resistance Outlet Temp probe
     Outlet_Temp = (pdm_analog_inputs[0] / 1023.0f) * 10000.0f;
-    Unicode::snprintfFloat(textResBuffer,TEXTRES_SIZE,"%.2f", Outlet_Temp);
+    Unicode::snprintfFloat(textResOutletBuffer,TEXTRESOUTLET_SIZE,"%.2f", Outlet_Temp);
+
+    //Resistance Setpoint
+    Unicode::snprintfFloat(textResSetBuffer,TEXTRESSET_SIZE,"%.2f", Resistance_Setpoint);
 
     //TEMP
-    Outlet_Temp = 25.0f - (Outlet_Temp - 2000.0f) / 88.0f;
+    Outlet_Temp = 25.0f - (Outlet_Temp - 2000.0f) / 88.0f; //rough equation
     Unicode::snprintfFloat(textTempBuffer,TEXTTEMP_SIZE,"%.2f", Outlet_Temp);
 
     //Clutch Engage/Disengage
@@ -38,6 +41,19 @@ void ScreenACView::handleTickEvent()
     	Unicode::strncpy(textCompBuffer,"Engaged", TEXTCOMP_SIZE);
     }
     else{Unicode::strncpy(textCompBuffer,"Disabled", TEXTCOMP_SIZE);}
+	if(++loop_count > 19)
+		{
+			loop_count = 0;
+			this->invalidate();
+		}
+
+    //Clutch Engage/Disengage
+    if(AC_PRESSURE_SWITCH == 2)
+    {
+    	Unicode::strncpy(textPressSwitchBuffer,"Active", TEXTPRESSSWITCH_SIZE);
+    }
+    else{Unicode::strncpy(textPressSwitchBuffer,"Disabled", TEXTPRESSSWITCH_SIZE);}
+
 	if(++loop_count > 19)
 		{
 			loop_count = 0;

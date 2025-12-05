@@ -25,6 +25,7 @@ bool FUEL = 0;
 bool LOW_OIL_PRESSURE = 0;
 bool HIGH_ENG_TEMP = 0;
 bool EXTERNAL_SHUTDOWN = 0;
+bool ENGINE_RUNNING = 0;
 
 void engine_app()
 {
@@ -92,6 +93,7 @@ void Crank()
 	{
 		CRANK = 0; //CRANK
 		engine_action = NO_ACTION;
+		ENGINE_RUNNING = 1;
 		engine_state = RUNNING;
 	}
 	else
@@ -146,8 +148,10 @@ void Crank_Rest()
 // ============================================================================
 void Running()
 {
+
 	if(engine_action == STOP)
 	{
+		ENGINE_RUNNING = 0;
 		engine_action = NO_ACTION;
 		engine_state = SPINDOWN;
 		slush_start_time = HAL_GetTick();
@@ -159,6 +163,7 @@ void Running()
 void Spindown()
 {
 	CRANK = 0; //CRANK
+	ENGINE_RUNNING = 0;
 	//FUEL = 0; //FUEL
 	FUEL = 1; //ENERGISE TO STOP
 	if(frequency > 0)

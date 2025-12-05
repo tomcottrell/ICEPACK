@@ -1,6 +1,7 @@
 #include "PDM.h"
 #include "Fault_Handling.h"
 #include "Engine_App.h"
+#include "AC.h"
 #include "frequency.h"
 #include "main.h"
 
@@ -16,6 +17,7 @@
 #define LOW_OIL_PRESS 4
 #define HIGH_TEMP 5
 #define EXT_SHDN 6
+#define AC_SWITCH 7
 
 
 #define MAX_FAULTS 20
@@ -92,6 +94,11 @@ void Fault_Handling()
 	{
 		engine_action = STOP;
 		Raise_DM(SHUTDOWN,EXT_SHDN);
+	}
+	//INLINE AC PRESSURE SWITCH
+	if(AC_PRESSURE_SWITCH == 2  && ((engine_state == RUNNING) ||(engine_state == CRANKING)))
+	{
+		Raise_DM(WARNING,AC_SWITCH);
 	}
 }
 

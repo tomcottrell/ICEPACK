@@ -18,6 +18,7 @@ enum TEXTS
     T_I2,
     T_I1,
     T_I0,
+    T___SINGLEUSE_VQ2D,
     T___SINGLEUSE_13ZF,
     T___SINGLEUSE_ZDIR,
     T___SINGLEUSE_3S12,

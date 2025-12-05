@@ -68,9 +68,10 @@ protected:
     touchgfx::TextAreaWithOneWildcard textResOutlet;
     touchgfx::TextAreaWithOneWildcard textResSet;
     touchgfx::TextArea text;
+    touchgfx::TextArea text_1;
     touchgfx::TextAreaWithOneWildcard textTemp;
     touchgfx::TextAreaWithOneWildcard textComp;
-    touchgfx::TextAreaWithOneWildcard textComp_1;
+    touchgfx::TextAreaWithOneWildcard textPressSwitch;
 
     /*
      * Wildcard Buffers
@@ -85,8 +86,8 @@ protected:
     touchgfx::Unicode::UnicodeChar textTempBuffer[TEXTTEMP_SIZE];
     static const uint16_t TEXTCOMP_SIZE = 15;
     touchgfx::Unicode::UnicodeChar textCompBuffer[TEXTCOMP_SIZE];
-    static const uint16_t TEXTCOMP_1_SIZE = 15;
-    touchgfx::Unicode::UnicodeChar textComp_1Buffer[TEXTCOMP_1_SIZE];
+    static const uint16_t TEXTPRESSSWITCH_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar textPressSwitchBuffer[TEXTPRESSSWITCH_SIZE];
 
 private:
 

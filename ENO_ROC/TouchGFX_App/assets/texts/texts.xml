@@ -25,7 +25,10 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_13ZF" Alignment="Left" TypographyId="Default">
+      <Text Id="__SingleUse_VQ2D" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Probe Res Inc as temp dec</Translation>
+      </Text>
+      <Text Id="__SingleUse_13ZF" Alignment="Left" TypographyId="Typography_00">
         <Translation Language="GB">Setpoint &lt; Probe = Clutch On</Translation>
       </Text>
       <Text Id="__SingleUse_ZDIR" Alignment="Left" TypographyId="Default">

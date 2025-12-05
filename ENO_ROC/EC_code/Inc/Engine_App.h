@@ -32,6 +32,7 @@ extern bool FUEL;
 extern bool LOW_OIL_PRESSURE;
 extern bool HIGH_ENG_TEMP;
 extern bool EXTERNAL_SHUTDOWN;
+extern bool ENGINE_RUNNING;
 extern const char* engine_error;
 
 // Function declarations

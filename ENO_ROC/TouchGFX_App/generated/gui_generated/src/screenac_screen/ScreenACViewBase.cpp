@@ -92,7 +92,13 @@ ScreenACViewBase::ScreenACViewBase()
     text.setTypedText(touchgfx::TypedText(T___SINGLEUSE_13ZF));
     add(text);
 
-    textTemp.setPosition(12, 101, 289, 27);
+    text_1.setPosition(13, 97, 320, 29);
+    text_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    text_1.setLinespacing(0);
+    text_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_VQ2D));
+    add(text_1);
+
+    textTemp.setPosition(13, 131, 289, 27);
     textTemp.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textTemp.setLinespacing(0);
     Unicode::snprintf(textTempBuffer, TEXTTEMP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_MAOV).getText());
@@ -100,7 +106,7 @@ ScreenACViewBase::ScreenACViewBase()
     textTemp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GB9E));
     add(textTemp);
 
-    textComp.setPosition(12, 124, 289, 27);
+    textComp.setPosition(13, 154, 289, 27);
     textComp.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textComp.setLinespacing(0);
     Unicode::snprintf(textCompBuffer, TEXTCOMP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8HP3).getText());
@@ -108,13 +114,13 @@ ScreenACViewBase::ScreenACViewBase()
     textComp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OD4N));
     add(textComp);
 
-    textComp_1.setPosition(12, 146, 289, 27);
-    textComp_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textComp_1.setLinespacing(0);
-    Unicode::snprintf(textComp_1Buffer, TEXTCOMP_1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V7ND).getText());
-    textComp_1.setWildcard(textComp_1Buffer);
-    textComp_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RZFY));
-    add(textComp_1);
+    textPressSwitch.setPosition(13, 176, 289, 27);
+    textPressSwitch.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textPressSwitch.setLinespacing(0);
+    Unicode::snprintf(textPressSwitchBuffer, TEXTPRESSSWITCH_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V7ND).getText());
+    textPressSwitch.setWildcard(textPressSwitchBuffer);
+    textPressSwitch.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RZFY));
+    add(textPressSwitch);
 }
 
 ScreenACViewBase::~ScreenACViewBase()

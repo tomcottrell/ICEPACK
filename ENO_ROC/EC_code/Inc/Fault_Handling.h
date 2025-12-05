@@ -26,6 +26,7 @@ typedef enum {
 	LOW_OIL_PRESS,	//4
 	HIGH_TEMP,		//5
 	EXT_SHDN,		//6
+	AC_SWITCH		//7
 } error_t;
 
 
