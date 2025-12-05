@@ -2,6 +2,8 @@
 #include <touchgfx/Unicode.hpp>
 #include "PDM.h"
 #include "AC.h"
+#include "Engine_App.h"
+
 
 ScreenACView::ScreenACView()
 {
@@ -64,6 +66,8 @@ void ScreenACView::handleTickEvent()
 void ScreenACView::FanSpeed()
 {
 
+	if(ENGINE_RUNNING)
+	{
 	if((LOW == 0) && (MED == 0) && (HIGH == 0))
 	{
 		LOW=1;MED=0;HIGH=0;
@@ -85,7 +89,8 @@ void ScreenACView::FanSpeed()
 		Unicode::strncpy(textFanBuffer,"OFF", TEXTFAN_SIZE);
 	}
 	else{LOW = 0;MED=0;HIGH=0;Unicode::strncpy(textFanBuffer,"OFF", TEXTFAN_SIZE);}
-
+	}
+	else{LOW = 0;MED=0;HIGH=0;Unicode::strncpy(textFanBuffer,"OFF", TEXTFAN_SIZE);}
 }
 
 void ScreenACView::INC()

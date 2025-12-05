@@ -28,5 +28,9 @@ void AC_app()
 	{
 		COMP = 0;
 	}
+	if(ENGINE_RUNNING == 0)
+	{
+		LOW = 0;MED=0;HIGH=0;
+	}
 }
 
